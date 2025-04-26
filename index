@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test 3 Practice - Index</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      font-size: 2em;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      margin: 20px 0;
+    }
+    a {
+      text-decoration: none;
+      font-size: 1.5em;
+      color: #007BFF;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>Test 3 Practice - Choose a Part</h1>
+  <ul>
+    <li><a href="https://mghuber9.github.io/test-3-practice-/part%201">Part 1</a></li>
+    <li><a href="https://mghuber9.github.io/test-3-practice-/part%202">Part 2</a></li>
+    <li><a href="https://mghuber9.github.io/test-3-practice-/part%203">Part 3</a></li>
+    <li><a href="https://mghuber9.github.io/test-3-practice-/part%204">Part 4</a></li>
+  </ul>
+</body>
+</html>
