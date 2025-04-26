@@ -18,89 +18,339 @@
   <button id="submitBtn">Submit</button>
 
   <script>
-   const quizData = [
+   const quizDataPart3 = [
   {
-    "question": "Which of the following best relates to the topic of 'Role of the Comptroller'?",
-    "correct": "The comptroller also audits expenditures and provides economic forecasts.",
+    "question": "Which of the following best relates to the topic of 'Regressive and Progressive Taxes'?",
+    "correct": "Progressive taxes increase in rate as income increases, placing a larger burden on the wealthy.",
     "answers": [
-      "They represent community interests in the education system.",
-      "The comptroller also audits expenditures and provides economic forecasts.",
+      "Progressive taxes increase in rate as income increases, placing a larger burden on the wealthy.",
       "It is harder to respond to mid-cycle crises due to infrequent sessions.",
-      "General government includes the operation of state agencies and executive offices."
+      "General obligation bonds require voter approval and are backed by taxes.",
+      "Council-manager cities hire a professional manager to execute policies set by the elected council."
     ]
   },
   {
-    "question": "What is one advantage of home rule cities over general law cities?",
-    "correct": "They can write and adopt their own charter and structure.",
+    "question": "What is the difference between a grand jury and a trial jury?",
+    "correct": "A grand jury decides whether to indict, while a trial jury determines guilt or innocence",
     "answers": [
-      "They elect U.S. senators.",
-      "They have fewer responsibilities.",
-      "They can write and adopt their own charter and structure.",
-      "They do not need to follow any state laws."
-    ]
-  },
-  {
-    "question": "What is the role of a city charter?",
-    "correct": "It sets the rules and framework for a home rule city’s government",
-    "answers": [
-      "It sets the rules and framework for a home rule city’s government",
-      "It provides housing permits",
-      "It elects judges to the Texas Supreme Court",
-      "It replaces state law in every case"
-    ]
-  },
-  {
-    "question": "Which of the following best relates to the topic of 'General Law and Home Rule Cities'?",
-    "correct": "Home rule cities can annex land and set term limits with fewer state restrictions.",
-    "answers": [
-      "Home rule cities can annex land and set term limits with fewer state restrictions.",
-      "General law cities often have a standard mayor-council government.",
-      "COGs do not have taxing authority or binding legislative powers.",
-      "The state has no personal income tax, relying on sales and property taxes."
-    ]
-  },
-  {
-    "question": "Which of the following best relates to the topic of 'Role of Local School Boards'?",
-    "correct": "They adopt budgets, hire superintendents, and oversee curriculum standards.",
-    "answers": [
-      "They adopt budgets, hire superintendents, and oversee curriculum standards.",
-      "They are repaid over time, typically through taxes or user fees.",
-      "Council-manager cities hire a professional manager to execute policies set by the elected council.",
-      "This system requires forecasting revenue 30 months in advance."
-    ]
-  },
-  {
-    "question": "Which of the following best relates to the topic of 'Biennial Budgets'?",
-    "correct": "The legislature cannot exceed the comptroller's revenue estimate.",
-    "answers": [
-      "The office plays a crucial gatekeeping role in Texas finance.",
-      "General government includes the operation of state agencies and executive offices.",
-      "The legislature cannot exceed the comptroller's revenue estimate.",
-      "Supplemental budgets are sometimes passed if revenue exceeds projections."
-    ]
-  },
-  {
-    "question": "What is the role of the Texas comptroller in the budget process?",
-    "correct": "To estimate state revenues and certify the budget",
-    "answers": [
-      "To estimate state revenues and certify the budget",
-      "To appoint city mayors",
-      "To oversee military spending",
-      "To serve as attorney general"
+      "A grand jury hears appeals",
+      "A grand jury issues the verdict",
+      "A trial jury determines if charges should be filed",
+      "A grand jury decides whether to indict, while a trial jury determines guilt or innocence"
     ]
   },
   {
     "question": "Which of the following best relates to the topic of 'Ad Valorem Taxes'?",
-    "correct": "They are assessed based on the market value of property each year.",
+    "correct": "Ad valorem means 'according to value'-typically property taxes.",
     "answers": [
-      "Home rule allows more autonomy in local policy, taxation, and government structure.",
-      "They are assessed based on the market value of property each year.",
-      "The commissioners court governs each county and passes local policies.",
-      "Biennial budgeting contributes to conservative fiscal practices."
+      "Counties operate jails and provide indigent healthcare.",
+      "Ad valorem means 'according to value'-typically property taxes.",
+      "They are repaid over time, typically through taxes or user fees.",
+      "Texas has 24 regional COGs covering all counties."
     ]
   },
-  // More questions coming next...
+  {
+    "question": "What does ad valorem mean in the context of property taxes?",
+    "correct": "According to the assessed value of the property",
+    "answers": [
+      "According to the assessed value of the property",
+      "A flat rate for all homeowners",
+      "Collected only at the federal level",
+      "Based on income"
+    ]
+  },
+  {
+    "question": "What does the city council typically do?",
+    "correct": "Passes local ordinances and sets city policies",
+    "answers": [
+      "Passes local ordinances and sets city policies",
+      "Enforces court orders",
+      "Oversees state highways",
+      "Hires teachers directly"
+    ]
+  },
+  {
+    "question": "Which of the following best relates to the topic of 'Biennial Budgets'?",
+    "correct": "Biennial budgeting contributes to conservative fiscal practices.",
+    "answers": [
+      "Balanced budget requirements limit deficit spending.",
+      "This system requires forecasting revenue 30 months in advance.",
+      "Biennial budgeting contributes to conservative fiscal practices.",
+      "Public safety and criminal justice receive significant funding, especially prisons."
+    ]
+  },
+  {
+    "question": "What is one of the main duties of the county judge in Texas?",
+    "correct": "Presiding over the commissioners court and issuing emergency declarations",
+    "answers": [
+      "Presiding over the commissioners court and issuing emergency declarations",
+      "Appointing state senators",
+      "Overseeing school curriculum",
+      "Approving federal bills"
+    ]
+  },
+  {
+    "question": "What is the role of the city manager in a council-manager government?",
+    "correct": "Implementing policies passed by the city council",
+    "answers": [
+      "Managing local businesses",
+      "Drafting federal legislation",
+      "Collecting state income taxes",
+      "Implementing policies passed by the city council"
+    ]
+  },
+  {
+    "question": "What is the main source of funding for most local governments in Texas?",
+    "correct": "Property taxes",
+    "answers": [
+      "Property taxes",
+      "Federal income taxes",
+      "National sales tax",
+      "Oil and gas revenue"
+    ]
+  },
+  {
+    "question": "What is the role of a district clerk in the judicial system?",
+    "correct": "Maintaining court records and managing jury duty notices",
+    "answers": [
+      "Maintaining court records and managing jury duty notices",
+      "Administering public school exams",
+      "Monitoring county spending",
+      "Approving new laws"
+    ]
+  },
+   {
+    "question": "Which of the following best relates to the topic of 'Role of County Governments'?",
+    "correct": "The commissioners court governs each county and passes local policies.",
+    "answers": [
+      "They are assessed based on the market value of property each year.",
+      "The commissioners court governs each county and passes local policies.",
+      "Each commissioner represents a precinct within the county.",
+      "Texas passes a budget every two years during odd-year legislative sessions."
+    ]
+  },
+  {
+    "question": "What is one of the county sheriff's key duties?",
+    "correct": "Enforcing the law and managing the county jail",
+    "answers": [
+      "Writing city ordinances",
+      "Representing Texas in the Senate",
+      "Overseeing public schools",
+      "Enforcing the law and managing the county jail"
+    ]
+  },
+  {
+    "question": "What is an example of a capital improvement project?",
+    "correct": "Building a new fire station or upgrading a sewer system",
+    "answers": [
+      "Building a new fire station or upgrading a sewer system",
+      "Funding a political campaign",
+      "Increasing the mayor's salary",
+      "Holding public debates"
+    ]
+  },
+  {
+    "question": "Which of the following best relates to the topic of 'Role of the Comptroller'?",
+    "correct": "Their estimate limits how much the legislature can spend",
+    "answers": [
+      "Examples of progressive taxes include federal income taxes and some redistributive policies.",
+      "Business and economic development, including workforce training, also receive funding.",
+      "Their estimate limits how much the legislature can spend",
+      "The commissioners court governs each county and passes local policies."
+    ]
+  },
+  {
+    "question": "Which of the following best relates to the topic of 'Biennial Budgets'?",
+    "correct": "Texas passes a budget every two years during odd-year legislative sessions.",
+    "answers": [
+      "Texas passes a budget every two years during odd-year legislative sessions.",
+      "They establish local policies within the framework of state and federal law.",
+      "Progressive taxes increase in rate as income increases, placing a larger burden on the wealthy.",
+      "Home rule cities (population > 5,000) can adopt charters to govern themselves."
+    ]
+  },
+  {
+    "question": "Which type of jury decides the outcome of a criminal or civil trial?",
+    "correct": "Trial jury",
+    "answers": [
+      "District jury",
+      "Commissioners jury",
+      "Appellate panel",
+      "Trial jury"
+    ]
+  },
+  {
+    "question": "What are local governments in Texas primarily responsible for?",
+    "correct": "Providing basic services like roads, police, and fire protection",
+    "answers": [
+      "Conducting national elections",
+      "Providing basic services like roads, police, and fire protection",
+      "Administering the federal income tax",
+      "Managing military affairs"
+    ]
+  },
+  {
+    "question": "What is the primary difference between a regressive and a progressive tax?",
+    "correct": "Regressive taxes place a heavier burden on low-income earners, while progressive taxes increase with income.",
+    "answers": [
+      "Regressive taxes place a heavier burden on low-income earners, while progressive taxes increase with income.",
+      "Progressive taxes are illegal in Texas, while regressive taxes are required.",
+      "Regressive taxes take more from higher-income earners, while progressive taxes are equal for all.",
+      "Regressive taxes only apply to luxury items, while progressive taxes are flat-rate."
+    ]
+  },
+  {
+    "question": "Which of the following best relates to the topic of 'Ad Valorem Taxes'?",
+    "correct": "Tax rates are set by local taxing authorities like school boards or city councils.",
+    "answers": [
+      "Tax rates are set by local taxing authorities like school boards or city councils.",
+      "Transportation spending includes highways, TxDOT, and public infrastructure.",
+      "Home rule allows more autonomy in local policy, taxation, and government structure.",
+      "The commissioners court governs each county and passes local policies."
+    ]
+  },
+  {
+    "question": "Which of the following best relates to the topic of 'Role of Local School Boards'?",
+    "correct": "They establish local policies within the framework of state and federal law.",
+    "answers": [
+      "They establish local policies within the framework of state and federal law.",
+      "Each commissioner represents a precinct within the county.",
+      "Environmental and natural resources programs make up a smaller share.",
+      "Education is the largest area, with spending on public schools and higher education."
+    ]
+  },
+  {
+    "question": "Why are counties referred to as 'administrative arms of the state' in Texas?",
+    "correct": "Because they carry out state laws and provide services locally",
+    "answers": [
+      "Because they enforce federal immigration policy",
+      "Because they carry out state laws and provide services locally",
+      "Because they regulate the U.S. military",
+      "Because they replace cities in rural areas"
+    ]
+  },
+  {
+    "question": "Which of the following best relates to the topic of 'Purpose and Uses of Municipal Bonds'?",
+    "correct": "Revenue bonds are repaid from specific income sources, like toll roads.",
+    "answers": [
+      "Council-manager cities hire a professional manager to execute policies set by the elected council.",
+      "General law cities operate under laws provided by the Texas Legislature.",
+      "Progressive tax structures aim to reduce income inequality.",
+      "Revenue bonds are repaid from specific income sources, like toll roads."
+    ]
+  },
+  {
+    "question": "Which group sets policies, approves budgets, and hires the superintendent in local school districts?",
+    "correct": "The school board",
+    "answers": [
+      "The school board",
+      "The county judge",
+      "The state board of education",
+      "The parent-teacher association"
+    ]
+  },
+  {
+    "question": "What is the primary role of county governments in Texas?",
+    "correct": "To act as administrative arms of the state and provide local services",
+    "answers": [
+      "To pass federal laws",
+      "To create local school curriculum",
+      "To manage city ordinances",
+      "To act as administrative arms of the state and provide local services"
+    ]
+  },
+  {
+    "question": "Which of the following best relates to the topic of 'Councils of Government (COGs)'?",
+    "correct": "COGs are voluntary associations of local governments for regional cooperation.",
+    "answers": [
+      "Examples of progressive taxes include federal income taxes and some redistributive policies.",
+      "Counties manage local roads, public safety, and elections.",
+      "COGs are voluntary associations of local governments for regional cooperation.",
+      "Transportation spending includes highways, TxDOT, and public infrastructure."
+    ]
+  },
+  {
+    "question": "What is a biennial budget?",
+    "correct": "A budget that covers two fiscal years",
+    "answers": [
+      "A budget only used during emergencies",
+      "A budget approved by voters every year",
+      "A budget that covers two fiscal years",
+      "A budget that changes monthly based on inflation"
+    ]
+  },
+  {
+    "question": "What is the difference between a strong mayor-council and a council-manager form of city government?",
+    "correct": "In a council-manager system, a professional manager implements policies set by the council.",
+    "answers": [
+      "In a strong mayor system, the mayor is appointed by the governor.",
+      "In a council-manager system, a professional manager implements policies set by the council.",
+      "In both systems, power is equally shared between the city attorney and the police chief.",
+      "In a council-manager system, the mayor handles all administration."
+    ]
+  },
+  {
+    "question": "Which of the following best relates to the topic of 'Ad Valorem Taxes'?",
+    "correct": "The appraisal district determines property values for tax purposes.",
+    "answers": [
+      "They adopt the county budget, set tax rates, and oversee county programs.",
+      "The office plays a crucial gatekeeping role in Texas finance.",
+      "The appraisal district determines property values for tax purposes.",
+      "Boards are composed of elected members serving staggered terms."
+    ]
+  },
+  {
+    "question": "Which of the following best relates to the topic of 'Regressive and Progressive Taxes'?",
+    "correct": "Progressive taxes increase in rate as income increases, placing a larger burden on the wealthy.",
+    "answers": [
+      "School boards set policy and direction for independent school districts (ISDs).",
+      "School boards can call for bond elections to fund new schools or improvements.",
+      "Progressive taxes increase in rate as income increases, placing a larger burden on the wealthy.",
+      "Examples of progressive taxes include federal income taxes and some redistributive policies."
+    ]
+  },
+  {
+    "question": "Which of the following best relates to the topic of 'Major Areas of State Spending'?",
+    "correct": "Transportation spending includes highways, TxDOT, and public infrastructure.",
+    "answers": [
+      "Transportation spending includes highways, TxDOT, and public infrastructure.",
+      "Home rule allows more autonomy in local policy, taxation, and government structure.",
+      "The state has no personal income tax, relying on sales and property taxes.",
+      "Examples of progressive taxes include federal income taxes and some redistributive policies."
+    ]
+  },
+  {
+    "question": "How are school board members chosen in Texas?",
+    "correct": "Elected by local voters",
+    "answers": [
+      "Selected by the superintendent",
+      "Elected by local voters",
+      "Appointed by the mayor",
+      "Appointed by the governor"
+    ]
+  },
+  {
+    "question": "Which of the following best relates to the topic of 'Ad Valorem Taxes'?",
+    "correct": "Texas relies heavily on ad valorem taxes due to no state income tax.",
+    "answers": [
+      "Texas relies heavily on ad valorem taxes due to no state income tax.",
+      "They adopt the county budget, set tax rates, and oversee county programs.",
+      "General law cities operate under laws provided by the Texas Legislature.",
+      "Their estimate limits how much the legislature can spend."
+    ]
+  },
+  {
+    "question": "What distinguishes a criminal case from a civil case?",
+    "correct": "Criminal cases deal with violations of law punishable by fines or jail",
+    "answers": [
+      "Criminal cases involve individuals suing each other",
+      "Civil cases involve prison sentences",
+      "Civil cases are decided by police officers",
+      "Criminal cases deal with violations of law punishable by fines or jail"
+    ]
+  }
 ];
+
 
     function shuffle(array) {
       for (let i = array.length - 1; i > 0; i--) {
