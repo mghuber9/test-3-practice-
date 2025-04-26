@@ -18,88 +18,337 @@
   <button id="submitBtn">Submit</button>
 
   <script>
-   const quizData = [
+  const quizDataPart4 = [
+  {
+    "question": "Which of the following best relates to the topic of 'Major Areas of State Spending'?",
+    "correct": "Education is the largest area, with spending on public schools and higher education.",
+    "answers": [
+      "Tax increases are politically unpopular, shaping budget decisions.",
+      "Education is the largest area, with spending on public schools and higher education.",
+      "Council-manager governments are seen as more businesslike and efficient.",
+      "Counties are the administrative arm of state government at the local level."
+    ]
+  },
+  {
+    "question": "Which of the following best relates to the topic of 'Major Areas of State Spending'?",
+    "correct": "Public safety and criminal justice receive significant funding, especially prisons.",
+    "answers": [
+      "These cities are limited in power to what state law expressly allows.",
+      "Ad valorem means 'according to value'-typically property taxes.",
+      "They collect state taxes and manage state accounts.",
+      "Public safety and criminal justice receive significant funding, especially prisons."
+    ]
+  },
+  {
+    "question": "Which of the following best relates to the topic of 'Regressive and Progressive Taxes'?",
+    "correct": "Regressive taxes place a higher burden on lower-income individuals as a percentage of income.",
+    "answers": [
+      "The comptroller also audits expenditures and provides economic forecasts.",
+      "Regressive taxes place a higher burden on lower-income individuals as a percentage of income.",
+      "Health and Human Services is second, dominated by Medicaid and CHIP.",
+      "Strong mayor-council cities have an independently elected mayor with executive powers."
+    ]
+  },
+  {
+    "question": "Which of the following best relates to the topic of 'Role of County Governments'?",
+    "correct": "Counties operate jails and provide indigent healthcare.",
+    "answers": [
+      "Counties operate jails and provide indigent healthcare.",
+      "They adopt budgets, hire superintendents, and oversee curriculum standards.",
+      "Each commissioner represents a precinct within the county.",
+      "The comptroller estimates and certifies revenue before budgets are passed."
+    ]
+  },
+  {
+    "question": "Which of the following best relates to the topic of 'Councils of Government (COGs)'?",
+    "correct": "COGs do not have taxing authority or binding legislative powers.",
+    "answers": [
+      "Progressive taxes increase in rate as income increases, placing a larger burden on the wealthy.",
+      "COGs do not have taxing authority or binding legislative powers.",
+      "Tax increases are politically unpopular, shaping budget decisions.",
+      "Texas has 24 regional COGs covering all counties."
+    ]
+  },
+  {
+    "question": "Which of the following best relates to the topic of 'Major Areas of State Spending'?",
+    "correct": "Health and Human Services is second, dominated by Medicaid and CHIP.",
+    "answers": [
+      "Each commissioner represents a precinct within the county.",
+      "Their estimate limits how much the legislature can spend.",
+      "General law cities often have a standard mayor-council government.",
+      "Health and Human Services is second, dominated by Medicaid and CHIP."
+    ]
+  },
   {
     "question": "Which of the following best relates to the topic of 'Role of the Comptroller'?",
-    "correct": "The comptroller also audits expenditures and provides economic forecasts.",
+    "correct": "They collect state taxes and manage state accounts.",
     "answers": [
-      "They represent community interests in the education system.",
-      "The comptroller also audits expenditures and provides economic forecasts.",
-      "It is harder to respond to mid-cycle crises due to infrequent sessions.",
-      "General government includes the operation of state agencies and executive offices."
+      "COGs do not have taxing authority or binding legislative powers.",
+      "General law cities operate under laws provided by the Texas Legislature.",
+      "They help coordinate transportation, emergency planning, and economic development.",
+      "They collect state taxes and manage state accounts."
     ]
   },
   {
-    "question": "What is one advantage of home rule cities over general law cities?",
-    "correct": "They can write and adopt their own charter and structure.",
+    "question": "What is the function of a Council of Government (COG) in Texas?",
+    "correct": "To coordinate planning and services between local governments",
     "answers": [
-      "They elect U.S. senators.",
-      "They have fewer responsibilities.",
-      "They can write and adopt their own charter and structure.",
-      "They do not need to follow any state laws."
+      "To coordinate planning and services between local governments",
+      "To regulate elections",
+      "To set federal tax rates",
+      "To approve mayoral appointments"
     ]
   },
   {
-    "question": "What is the role of a city charter?",
-    "correct": "It sets the rules and framework for a home rule city’s government",
+    "question": "What is zoning in city government?",
+    "correct": "Dividing city land into sections for specific uses like residential or commercial",
     "answers": [
-      "It sets the rules and framework for a home rule city’s government",
-      "It provides housing permits",
-      "It elects judges to the Texas Supreme Court",
-      "It replaces state law in every case"
+      "Managing voter districts",
+      "Setting property taxes",
+      "Approving utility bills",
+      "Dividing city land into sections for specific uses like residential or commercial"
+    ]
+  },
+  {
+    "question": "What level of government most directly affects citizens’ daily lives in Texas?",
+    "correct": "Local",
+    "answers": [
+      "Local",
+      "International",
+      "State",
+      "National"
+    ]
+  },
+  {
+    "question": "Why is the commissioner's court not a judicial court despite its name?",
+    "correct": "It performs executive and legislative functions, not judicial.",
+    "answers": [
+      "It performs executive and legislative functions, not judicial.",
+      "It only functions during emergencies.",
+      "It doesn't exist anymore.",
+      "It is a federal agency."
+    ]
+  },
+    {
+    "question": "Which of the following best relates to the topic of 'Councils of Government (COGs)'?",
+    "correct": "COGs receive funding from local, state, and federal sources.",
+    "answers": [
+      "COGs receive funding from local, state, and federal sources.",
+      "Municipal bonds often receive favorable tax treatment for investors.",
+      "The office plays a crucial gatekeeping role in Texas finance.",
+      "Transportation spending includes highways, TxDOT, and public infrastructure."
     ]
   },
   {
     "question": "Which of the following best relates to the topic of 'General Law and Home Rule Cities'?",
     "correct": "Home rule cities can annex land and set term limits with fewer state restrictions.",
     "answers": [
+      "Each commissioner represents a precinct within the county.",
+      "The strong mayor oversees departments, prepares the budget, and can veto council actions.",
       "Home rule cities can annex land and set term limits with fewer state restrictions.",
-      "General law cities often have a standard mayor-council government.",
-      "COGs do not have taxing authority or binding legislative powers.",
-      "The state has no personal income tax, relying on sales and property taxes."
+      "Fiscal conservatism is a core political value in Texas."
     ]
   },
   {
-    "question": "Which of the following best relates to the topic of 'Role of Local School Boards'?",
-    "correct": "They adopt budgets, hire superintendents, and oversee curriculum standards.",
+    "question": "Which of the following best relates to the topic of 'Purpose and Uses of Municipal Bonds'?",
+    "correct": "They are repaid over time, typically through taxes or user fees.",
     "answers": [
-      "They adopt budgets, hire superintendents, and oversee curriculum standards.",
       "They are repaid over time, typically through taxes or user fees.",
-      "Council-manager cities hire a professional manager to execute policies set by the elected council.",
-      "This system requires forecasting revenue 30 months in advance."
+      "Home rule cities (population > 5,000) can adopt charters to govern themselves.",
+      "Supplemental budgets are sometimes passed if revenue exceeds projections.",
+      "General government includes the operation of state agencies and executive offices."
+    ]
+  },
+  {
+    "question": "Which courts in Texas generally handle felony cases?",
+    "correct": "District courts",
+    "answers": [
+      "Municipal courts",
+      "County courts",
+      "Justice of the Peace courts",
+      "District courts"
+    ]
+  },
+  {
+    "question": "Why are municipal bonds considered important for local governments?",
+    "correct": "They allow cities to fund large projects without raising taxes immediately.",
+    "answers": [
+      "They allow cities to fund large projects without raising taxes immediately.",
+      "They are optional and rarely used.",
+      "They are primarily used to fund election campaigns.",
+      "They reduce property values."
+    ]
+  },
+  {
+    "question": "How are municipal bonds typically repaid?",
+    "correct": "With tax revenue or revenue from the funded project",
+    "answers": [
+      "Using the national debt surplus",
+      "From the governor's office",
+      "With tax revenue or revenue from the funded project",
+      "Through sales tax only"
+    ]
+  },
+  {
+    "question": "Which of the following best relates to the topic of 'Purpose and Uses of Municipal Bonds'?",
+    "correct": "They allow cities to make long-term investments without immediate tax hikes.",
+    "answers": [
+      "Texas has 24 regional COGs covering all counties.",
+      "They are repaid over time, typically through taxes or user fees.",
+      "They allow cities to make long-term investments without immediate tax hikes.",
+      "They collect state taxes and manage state accounts."
+    ]
+  },
+  {
+    "question": "Which official is typically elected in a general election in Texas counties?",
+    "correct": "County judge",
+    "answers": [
+      "County judge",
+      "Federal circuit judge",
+      "City treasurer",
+      "Legislative intern"
+    ]
+  },
+  {
+    "question": "Which of the following best relates to the topic of 'Regressive and Progressive Taxes'?",
+    "correct": "Texas relies more on regressive taxes like sales and fuel taxes due to its no-income-tax policy.",
+    "answers": [
+      "Council-manager governments are seen as more businesslike and efficient.",
+      "Texas relies more on regressive taxes like sales and fuel taxes due to its no-income-tax policy.",
+      "School boards set policy and direction for independent school districts (ISDs).",
+      "Health and Human Services is second, dominated by Medicaid and CHIP."
+    ]
+  },
+  {
+    "question": "What is the function of a county auditor in Texas?",
+    "correct": "To oversee financial records and ensure proper use of public funds",
+    "answers": [
+      "To issue building permits",
+      "To oversee financial records and ensure proper use of public funds",
+      "To prosecute criminals",
+      "To manage elections"
     ]
   },
   {
     "question": "Which of the following best relates to the topic of 'Biennial Budgets'?",
-    "correct": "The legislature cannot exceed the comptroller's revenue estimate.",
+    "correct": "It is harder to respond to mid-cycle crises due to infrequent sessions.",
     "answers": [
-      "The office plays a crucial gatekeeping role in Texas finance.",
+      "School boards can call for bond elections to fund new schools or improvements.",
+      "It is harder to respond to mid-cycle crises due to infrequent sessions.",
+      "These cities are limited in power to what state law expressly allows.",
+      "A conservative estimate can effectively constrain legislative ambitions."
+    ]
+  },
+  {
+    "question": "What is a municipal ordinance?",
+    "correct": "A law passed by a city council that applies within city limits",
+    "answers": [
+      "A civil court opinion",
+      "A county rule on taxation",
+      "A law passed by a city council that applies within city limits",
+      "A law passed by the federal government"
+    ]
+  },
+  {
+    "question": "Which court often handles traffic violations and Class C misdemeanors?",
+    "correct": "Justice of the Peace",
+    "answers": [
+      "Federal court",
+      "Texas Supreme Court",
+      "Justice of the Peace",
+      "District court"
+    ]
+  },
+  {
+    "question": "What is the purpose of municipal bonds?",
+    "correct": "To raise funds for capital projects like roads and public buildings",
+    "answers": [
+      "To raise funds for capital projects like roads and public buildings",
+      "To collect interest from private banks",
+      "To cover day-to-day operating costs of city governments",
+      "To eliminate property taxes"
+    ]
+  },
+  {
+    "question": "Which of the following best relates to the topic of 'State Fiscal Policy'?",
+    "correct": "Balanced budget requirements limit deficit spending.",
+    "answers": [
+      "Balanced budget requirements limit deficit spending.",
+      "Used primarily to fund local services like schools and fire departments.",
+      "Municipal bonds often receive favorable tax treatment for investors.",
+      "Regressive taxes place a higher burden on lower-income individuals as a percentage of income."
+    ]
+  },
+  {
+    "question": "What is the role of the sheriff in a Texas county?",
+    "correct": "Enforcing laws and managing the county jail",
+    "answers": [
+      "Enforcing laws and managing the county jail",
+      "Approving municipal bonds",
+      "Issuing business licenses",
+      "Presiding over the school board"
+    ]
+  },
+  {
+    "question": "Which of the following best relates to the topic of 'Role of Local School Boards'?",
+    "correct": "School boards set policy and direction for independent school districts (ISDs).",
+    "answers": [
+      "The county judge may also handle emergency management and rural judicial duties.",
+      "Biennial budgeting contributes to conservative fiscal practices.",
+      "Counties manage local roads, public safety, and elections.",
+      "School boards set policy and direction for independent school districts (ISDs)."
+    ]
+  },
+  {
+    "question": "Which of the following best relates to the topic of 'Major Areas of State Spending'?",
+    "correct": "Federal mandates and dedicated funds restrict budget flexibility.",
+    "answers": [
       "General government includes the operation of state agencies and executive offices.",
-      "The legislature cannot exceed the comptroller's revenue estimate.",
-      "Supplemental budgets are sometimes passed if revenue exceeds projections."
+      "Tax rates are set by local taxing authorities like school boards or city councils.",
+      "They collect state taxes and manage state accounts.",
+      "Federal mandates and dedicated funds restrict budget flexibility."
     ]
   },
   {
-    "question": "What is the role of the Texas comptroller in the budget process?",
-    "correct": "To estimate state revenues and certify the budget",
+    "question": "Which of the following best relates to the topic of 'Role of Local School Boards'?",
+    "correct": "School boards can call for bond elections to fund new schools or improvements.",
     "answers": [
-      "To estimate state revenues and certify the budget",
-      "To appoint city mayors",
-      "To oversee military spending",
-      "To serve as attorney general"
+      "School boards can call for bond elections to fund new schools or improvements.",
+      "Balanced budget requirements limit deficit spending.",
+      "They do not have home rule; their powers are defined by the state.",
+      "Texas fiscal policy emphasizes low taxes and limited government."
     ]
   },
   {
-    "question": "Which of the following best relates to the topic of 'Ad Valorem Taxes'?",
-    "correct": "They are assessed based on the market value of property each year.",
+    "question": "Which of the following best relates to the topic of 'Purpose and Uses of Municipal Bonds'?",
+    "correct": "General obligation bonds require voter approval and are backed by taxes.",
     "answers": [
-      "Home rule allows more autonomy in local policy, taxation, and government structure.",
-      "They are assessed based on the market value of property each year.",
-      "The commissioners court governs each county and passes local policies.",
-      "Biennial budgeting contributes to conservative fiscal practices."
+      "General obligation bonds require voter approval and are backed by taxes.",
+      "They are repaid over time, typically through taxes or user fees.",
+      "The office plays a crucial gatekeeping role in Texas finance.",
+      "Council-manager governments are seen as more businesslike and efficient."
     ]
   },
-  // More questions coming next...
+  {
+    "question": "Which of the following best relates to the topic of 'Role of the Comptroller'?",
+    "correct": "The comptroller estimates and certifies revenue before budgets are passed.",
+    "answers": [
+      "General law cities often have a standard mayor-council government.",
+      "Council-manager cities hire a professional manager to execute policies set by the elected council.",
+      "The comptroller estimates and certifies revenue before budgets are passed.",
+      "Health and Human Services is second, dominated by Medicaid and CHIP."
+    ]
+  },
+  {
+    "question": "Which of the following best relates to the topic of 'Role of Local School Boards'?",
+    "correct": "Boards are composed of elected members serving staggered terms.",
+    "answers": [
+      "General law cities operate under laws provided by the Texas Legislature.",
+      "Boards are composed of elected members serving staggered terms.",
+      "They maintain property records and conduct criminal and civil courts.",
+      "General law cities often have a standard mayor-council government."
+    ]
+  }
 ];
 
     function shuffle(array) {
