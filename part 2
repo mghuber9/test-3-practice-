@@ -1,1 +1,194 @@
- 
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Chapter 13 Multiple Choice Quiz</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; max-width: 800px; margin: auto; }
+    .question { margin-bottom: 20px; }
+    .answers label { display: block; margin: 5px 0; }
+    #submitBtn { padding: 10px 20px; font-size: 16px; margin-top: 20px; }
+    .correct-answer { color: green; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h2>Chapter 13 Multiple Choice Quiz – Part 1</h2>
+  <div id="quizContainer"></div>
+  <button id="submitBtn">Submit</button>
+
+  <script>
+   const quizData = [
+  {
+    "question": "Which of the following best relates to the topic of 'Role of the Comptroller'?",
+    "correct": "The comptroller also audits expenditures and provides economic forecasts.",
+    "answers": [
+      "They represent community interests in the education system.",
+      "The comptroller also audits expenditures and provides economic forecasts.",
+      "It is harder to respond to mid-cycle crises due to infrequent sessions.",
+      "General government includes the operation of state agencies and executive offices."
+    ]
+  },
+  {
+    "question": "What is one advantage of home rule cities over general law cities?",
+    "correct": "They can write and adopt their own charter and structure.",
+    "answers": [
+      "They elect U.S. senators.",
+      "They have fewer responsibilities.",
+      "They can write and adopt their own charter and structure.",
+      "They do not need to follow any state laws."
+    ]
+  },
+  {
+    "question": "What is the role of a city charter?",
+    "correct": "It sets the rules and framework for a home rule city’s government",
+    "answers": [
+      "It sets the rules and framework for a home rule city’s government",
+      "It provides housing permits",
+      "It elects judges to the Texas Supreme Court",
+      "It replaces state law in every case"
+    ]
+  },
+  {
+    "question": "Which of the following best relates to the topic of 'General Law and Home Rule Cities'?",
+    "correct": "Home rule cities can annex land and set term limits with fewer state restrictions.",
+    "answers": [
+      "Home rule cities can annex land and set term limits with fewer state restrictions.",
+      "General law cities often have a standard mayor-council government.",
+      "COGs do not have taxing authority or binding legislative powers.",
+      "The state has no personal income tax, relying on sales and property taxes."
+    ]
+  },
+  {
+    "question": "Which of the following best relates to the topic of 'Role of Local School Boards'?",
+    "correct": "They adopt budgets, hire superintendents, and oversee curriculum standards.",
+    "answers": [
+      "They adopt budgets, hire superintendents, and oversee curriculum standards.",
+      "They are repaid over time, typically through taxes or user fees.",
+      "Council-manager cities hire a professional manager to execute policies set by the elected council.",
+      "This system requires forecasting revenue 30 months in advance."
+    ]
+  },
+  {
+    "question": "Which of the following best relates to the topic of 'Biennial Budgets'?",
+    "correct": "The legislature cannot exceed the comptroller's revenue estimate.",
+    "answers": [
+      "The office plays a crucial gatekeeping role in Texas finance.",
+      "General government includes the operation of state agencies and executive offices.",
+      "The legislature cannot exceed the comptroller's revenue estimate.",
+      "Supplemental budgets are sometimes passed if revenue exceeds projections."
+    ]
+  },
+  {
+    "question": "What is the role of the Texas comptroller in the budget process?",
+    "correct": "To estimate state revenues and certify the budget",
+    "answers": [
+      "To estimate state revenues and certify the budget",
+      "To appoint city mayors",
+      "To oversee military spending",
+      "To serve as attorney general"
+    ]
+  },
+  {
+    "question": "Which of the following best relates to the topic of 'Ad Valorem Taxes'?",
+    "correct": "They are assessed based on the market value of property each year.",
+    "answers": [
+      "Home rule allows more autonomy in local policy, taxation, and government structure.",
+      "They are assessed based on the market value of property each year.",
+      "The commissioners court governs each county and passes local policies.",
+      "Biennial budgeting contributes to conservative fiscal practices."
+    ]
+  },
+  // More questions coming next...
+];
+
+    function shuffle(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+    }
+
+    function loadQuiz() {
+      const container = document.getElementById('quizContainer');
+      container.innerHTML = '';
+      shuffle(quizData);
+
+      quizData.forEach((item, index) => {
+        shuffle(item.answers);
+        const qDiv = document.createElement('div');
+        qDiv.className = 'question';
+        qDiv.innerHTML = `<p><strong>${index + 1}. ${item.question}</strong></p>`;
+
+        const answersDiv = document.createElement('div');
+        answersDiv.className = 'answers';
+
+        item.answers.forEach(answer => {
+          answersDiv.innerHTML += `
+            <label>
+              <input type="radio" name="q${index}" value="${answer}"> ${answer}
+            </label>
+          `;
+        });
+
+        qDiv.appendChild(answersDiv);
+        container.appendChild(qDiv);
+      });
+    }
+
+    document.getElementById('submitBtn').addEventListener('click', () => {
+      let score = 0;
+      let missed = [];
+
+      quizData.forEach((item, index) => {
+        const selected = document.querySelector(`input[name="q${index}"]:checked`);
+        if (selected && selected.value === item.correct) {
+          score++;
+        } else {
+          missed.push({ question: item.question, correct: item.correct });
+        }
+      });
+
+      let name = prompt("Enter your name:");
+      let quizName = "Chapter 13 Quiz - Part 1";
+      let total = quizData.length;
+
+      fetch("https://script.google.com/macros/s/AKfycbzyNT1SVxLy3yjEa7alnNx_whHptmNGzLzPbqrxah_6xglsO1VdwpyAawgEuKzzPc_q/exec", {
+        method: "POST",
+        body: JSON.stringify({
+          name: name,
+          quiz: quizName,
+          score: score,
+          total: total
+        }),
+        headers: {
+          "Content-Type": "application/json"
+        }
+      });
+
+      setTimeout(() => {
+        const container = document.getElementById('quizContainer');
+        container.innerHTML = `<h2>Your Score: ${score} / ${quizData.length}</h2>`;
+
+        if (missed.length > 0) {
+          container.innerHTML += `<h3>You missed the following questions:</h3>`;
+          missed.forEach((item, i) => {
+            container.innerHTML += `
+              <div class="question">
+                <p><strong>${i + 1}. ${item.question}</strong></p>
+                <p class="correct-answer">Correct answer: ${item.correct}</p>
+              </div>
+            `;
+          });
+        } else {
+          container.innerHTML += `<p><strong>Perfect score! Great job!</strong></p>`;
+        }
+
+        document.getElementById('submitBtn').style.display = 'none';
+      }, 1000);
+    });
+
+    window.onload = loadQuiz;
+  </script>
+</body>
+</html> 
