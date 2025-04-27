@@ -362,7 +362,8 @@
     function loadQuiz() {
       const container = document.getElementById('quizContainer');
       container.innerHTML = '';
-      shuffle(quizData);
+      shuffle(quizDataPart3);
+
 
       quizData.forEach((item, index) => {
         shuffle(item.answers);
