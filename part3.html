@@ -365,7 +365,7 @@
       shuffle(quizDataPart3);
 
 
-      quizData.forEach((item, index) => {
+      quizDataPart3.forEach((item, index) => {
         shuffle(item.answers);
         const qDiv = document.createElement('div');
         qDiv.className = 'question';
@@ -391,7 +391,7 @@
       let score = 0;
       let missed = [];
 
-      quizData.forEach((item, index) => {
+      quizDataPart3.forEach((item, index) => {
         const selected = document.querySelector(`input[name="q${index}"]:checked`);
         if (selected && selected.value === item.correct) {
           score++;
@@ -402,7 +402,7 @@
 
       let name = prompt("Enter your name:");
       let quizName = "Chapter 13 Quiz - Part 1";
-      let total = quizData.length;
+      let total = quizDataPart3.length;
 
       fetch("https://script.google.com/macros/s/AKfycbzyNT1SVxLy3yjEa7alnNx_whHptmNGzLzPbqrxah_6xglsO1VdwpyAawgEuKzzPc_q/exec", {
         method: "POST",
@@ -419,7 +419,7 @@
 
       setTimeout(() => {
         const container = document.getElementById('quizContainer');
-        container.innerHTML = `<h2>Your Score: ${score} / ${quizData.length}</h2>`;
+        container.innerHTML = `<h2>Your Score: ${score} / ${quizDataPart3.length}</h2>`;
 
         if (missed.length > 0) {
           container.innerHTML += `<h3>You missed the following questions:</h3>`;
