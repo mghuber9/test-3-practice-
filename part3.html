@@ -17,8 +17,8 @@
   <div id="quizContainer"></div>
   <button id="submitBtn">Submit</button>
 
-  <script>
-   const quizDataPart3 = [
+<script>
+const quizDataPart3 = [
   {
     "question": "Which of the following best relates to the topic of 'Regressive and Progressive Taxes'?",
     "correct": "Progressive taxes increase in rate as income increases, placing a larger burden on the wealthy.",
@@ -351,95 +351,97 @@
   }
 ];
 
+// Shuffle function
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
 
-    function shuffle(array) {
-      for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-      }
-    }
+// Load Quiz
+function loadQuiz() {
+  const container = document.getElementById('quizContainer');
+  container.innerHTML = '';
+  shuffle(quizDataPart3);
 
-    function loadQuiz() {
-      const container = document.getElementById('quizContainer');
-      container.innerHTML = '';
-      shuffle(quizDataPart3);
+  quizDataPart3.forEach((item, index) => {
+    shuffle(item.answers);
+    const qDiv = document.createElement('div');
+    qDiv.className = 'question';
+    qDiv.innerHTML = `<p><strong>${index + 1}. ${item.question}</strong></p>`;
 
+    const answersDiv = document.createElement('div');
+    answersDiv.className = 'answers';
 
-      quizDataPart3.forEach((item, index) => {
-        shuffle(item.answers);
-        const qDiv = document.createElement('div');
-        qDiv.className = 'question';
-        qDiv.innerHTML = `<p><strong>${index + 1}. ${item.question}</strong></p>`;
-
-        const answersDiv = document.createElement('div');
-        answersDiv.className = 'answers';
-
-        item.answers.forEach(answer => {
-          answersDiv.innerHTML += `
-            <label>
-              <input type="radio" name="q${index}" value="${answer}"> ${answer}
-            </label>
-          `;
-        });
-
-        qDiv.appendChild(answersDiv);
-        container.appendChild(qDiv);
-      });
-    }
-
-    document.getElementById('submitBtn').addEventListener('click', () => {
-      let score = 0;
-      let missed = [];
-
-      quizDataPart3.forEach((item, index) => {
-        const selected = document.querySelector(`input[name="q${index}"]:checked`);
-        if (selected && selected.value === item.correct) {
-          score++;
-        } else {
-          missed.push({ question: item.question, correct: item.correct });
-        }
-      });
-
-      let name = prompt("Enter your name:");
-      let quizName = "Chapter 13 Quiz - Part 1";
-      let total = quizDataPart3.length;
-
-      fetch("https://script.google.com/macros/s/AKfycbzyNT1SVxLy3yjEa7alnNx_whHptmNGzLzPbqrxah_6xglsO1VdwpyAawgEuKzzPc_q/exec", {
-        method: "POST",
-        body: JSON.stringify({
-          name: name,
-          quiz: quizName,
-          score: score,
-          total: total
-        }),
-        headers: {
-          "Content-Type": "application/json"
-        }
-      });
-
-      setTimeout(() => {
-        const container = document.getElementById('quizContainer');
-        container.innerHTML = `<h2>Your Score: ${score} / ${quizDataPart3.length}</h2>`;
-
-        if (missed.length > 0) {
-          container.innerHTML += `<h3>You missed the following questions:</h3>`;
-          missed.forEach((item, i) => {
-            container.innerHTML += `
-              <div class="question">
-                <p><strong>${i + 1}. ${item.question}</strong></p>
-                <p class="correct-answer">Correct answer: ${item.correct}</p>
-              </div>
-            `;
-          });
-        } else {
-          container.innerHTML += `<p><strong>Perfect score! Great job!</strong></p>`;
-        }
-
-        document.getElementById('submitBtn').style.display = 'none';
-      }, 1000);
+    item.answers.forEach(answer => {
+      answersDiv.innerHTML += `
+        <label>
+          <input type="radio" name="q${index}" value="${answer}"> ${answer}
+        </label>
+      `;
     });
 
-    window.onload = loadQuiz;
-  </script>
+    qDiv.appendChild(answersDiv);
+    container.appendChild(qDiv);
+  });
+}
+
+// Handle submit
+document.getElementById('submitBtn').addEventListener('click', () => {
+  let score = 0;
+  let missed = [];
+
+  quizDataPart3.forEach((item, index) => {
+    const selected = document.querySelector(`input[name="q${index}"]:checked`);
+    if (selected && selected.value === item.correct) {
+      score++;
+    } else {
+      missed.push({ question: item.question, correct: item.correct });
+    }
+  });
+
+  let name = prompt("Enter your name:");
+  let quizName = "Chapter 13 Quiz - Part 1";
+  let total = quizDataPart3.length;
+
+  fetch("https://script.google.com/macros/s/AKfycbzyNT1SVxLy3yjEa7alnNx_whHptmNGzLzPbqrxah_6xglsO1VdwpyAawgEuKzzPc_q/exec", {
+    method: "POST",
+    body: JSON.stringify({
+      name: name,
+      quiz: quizName,
+      score: score,
+      total: total
+    }),
+    headers: {
+      "Content-Type": "application/json"
+    }
+  });
+
+  setTimeout(() => {
+    const container = document.getElementById('quizContainer');
+    container.innerHTML = `<h2>Your Score: ${score} / ${quizDataPart3.length}</h2>`;
+
+    if (missed.length > 0) {
+      container.innerHTML += `<h3>You missed the following questions:</h3>`;
+      missed.forEach((item, i) => {
+        container.innerHTML += `
+          <div class="question">
+            <p><strong>${i + 1}. ${item.question}</strong></p>
+            <p class="correct-answer">Correct answer: ${item.correct}</p>
+          </div>
+        `;
+      });
+    } else {
+      container.innerHTML += `<p><strong>Perfect score! Great job!</strong></p>`;
+    }
+
+    document.getElementById('submitBtn').style.display = 'none';
+  }, 1000);
+});
+
+// Load the quiz when page opens
+window.onload = loadQuiz;
+</script>
 </body>
 </html>
